@@ -17,14 +17,18 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-o mx-large-3">
+                <ul class="navbar-nav mx-o mx-large-3 text-nowrap">
+                  {{-- mx = margin kiri kanan, mx-large = margin kiri kanan desktop --}}
                   <li class="nav-item d-block d-lg-none d-xl-block" >
+                    {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}
                     <a class="nav-link active" aria-current="page" href="{{ route ('home') }}">Home</a>
                   </li>
                   <li class="nav-item d-block d-lg-none d-xl-block" >
+                  {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}
                     <a class="nav-link active"  href="#">Discussion</a>
                   </li>
                   <li class="nav-item d-block d-lg-none d-xl-block" >
+                    {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}
                     <a class="nav-link active"  href="#">About Us</a>
                   </li>
                 </ul>
@@ -34,13 +38,14 @@
                         <input class="form-control border-start-0 ps-0" type="search" placeholder="Search" aria-label="Search" name="" value="">
                     </div>
                 </form>
-                <ul>
-                    <li class="nav-item my-auto">
-                        <a class="nav-link text-nowrap"  href="#">Log In</a>
-                    </li>
-                    <li class="nav-item ps-1 pe-0">
-                        <a class="btn btn-primary-white"  href="#">Sign Up</a>
-                    </li>
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                  {{-- margin kiri auto, margin atas-bawah 2, desktop atas bawah 0 --}}
+                  <li class="nav-item my-auto">
+                    <a class="nav-link text-nowrap"  href="#">Log In</a>
+                  </li>
+                  <li class="nav-item ps-1 pe-0">
+                    <a class="btn btn-primary-white"  href="#">Sign Up</a>
+                  </li>
                 </ul>
               </div>
             </div>
