@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Laradis</title>
 
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
     </head>
@@ -63,7 +63,23 @@
             </div>
           </div>
         </section>
-
+        <section class="container min-h-372px">
+          <div class="row">
+            <div class="col-12 col-lg-4 text-center"> {{-- 12 kolom mobile full 4 kolom desktop --}}
+              <img class="promote-icon mb-2" {{-- marginbottom 2/8px --}} src="{{ url('assets/images/Discussions.png') }}" alt="Discussions">
+              <h2>Discussions</h2>
+              <p class="fs-3" {{-- font size 3 --}}>34834</p>
+            <div class="col-12 col-lg-4 text-center"> {{-- 12 kolom mobile full 4 kolom desktop --}}
+              <img class="promote-icon mb-2" {{-- marginbottom 2/8px --}} src="{{ url('assets/images/Answers.png') }}" alt="Answer">
+              <h2>Answers</h2>
+              <p class="fs-3" {{-- font size 3 --}}>65763</p>
+            <div class="col-12 col-lg-4 text-center"> {{-- 12 kolom mobile full 4 kolom desktop --}}
+              <img class="promote-icon mb-2" {{-- marginbottom 2/8px --}} src="{{ url('assets/images/Users.png') }}" alt="Users">
+              <h2>Users</h2>
+              <p class="fs-3" {{-- font size 3 --}}>57643</p>
+            </div>
+          </div>
+        </section>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </body>
 </html>
