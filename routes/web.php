@@ -19,4 +19,8 @@ Route::get('/', function () {
 
 Route::get('login', function () {
     return view('pages.auth.login');
-})-> name ('home');
+})-> name ('login');
+
+Route::get('sign-up', function () {
+    return view('pages.auth.sign-up');
+})-> name ('sign-up');

@@ -6,8 +6,10 @@
     <body>
         @include('partials.nav')
         @yield('body')
+        @include('partials.footer')
         @yield('before-script')
         @include('partials.script')
+        @include('partials.toogle-password')
         @yield('after-script')      
     </body>
 </html>
