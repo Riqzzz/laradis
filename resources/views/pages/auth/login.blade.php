@@ -1,7 +1,6 @@
 @extends('Layouts.auth')
 
 @section('body')
-
     <section class="bg-gray vh-100" {{-- fullsreen --}}>
         <div class="container h-100 pt-5">
             <div class="row justify-content-center">
