@@ -153,17 +153,20 @@
     <script>
         $(document).ready(function(){
             $('#share-discussion').click(function(){
+                //ketika share-discussions diklik maka akan menampilkan nilai current-url
                 var copyText = $('#current-url');
 
                 copyText[0].select();
                 copyText[0].setSelectionRange(0, 999999);
-                navigator.clipboard.writeText(copyText.val());
+                navigator.clipboard.writeText(copyText.val()); 
+                //url dari show.blade ditampung di clipboard hasil pastenya sharenya akan sama dengan nilai yg ada pada show.blade
 
                 var alert = $('#alert');
                 alert.removeClass('d-none');
 
-                var alertContainer = alert.find('.container');
+                var alertContainer = alert.find('.container'); //direct nilai ke class alert di aler.blade.php
                 alertContainer.first().text('Link to this discussions copied succesfully');
+                // jika share succes maka akan menampilkan teks diatas
             })
         })
     </script>
