@@ -12,7 +12,7 @@
                         51,875 Discussions
                     </div>
                 </div>
-                <a href="" class="btn btn-primary">Log In to Create Discussion</a>
+                <a href="{{ route('login')}}" class="btn btn-primary">Log In to Create Discussion</a>
             </div>
             <div class="row">
                 <div class="col-12 col-lg-8 mb-5 mb-lg-0">
@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-lg-10">
-                                <a href="">
+                                <a href="{{ route('discussions details')}}">
                                     <h3>How to add a custom validation in laravel?</h3>
                                 </a>
                                 <p>I am working on a blogging application in Laravel 8. There are 4 user roles, among which, the "...</p>
@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-lg-10">
-                                <a href="">
+                                <a href="{{ route('discussions details') }}">
                                     <h3>How to add a custom validation in laravel?</h3>
                                 </a>
                                 <p>I am working on a blogging application in Laravel 8. There are 4 user roles, among which, the "...</p>

@@ -129,7 +129,8 @@
                         </div>
                     </div>
                     <div class="fw-bold text-center">
-                        Please <a href="" class="text-primary">sign in</a> or <a href="" class="text-primary">create</a> an account to participate in this discussions.
+                        Please <a href="{{ route('login')}}" class="text-primary">sign in</a> or 
+                        <a href="{{ route('sign-up')}}" class="text-primary">create</a> an account to participate in this discussions.
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">

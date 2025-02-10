@@ -10,30 +10,30 @@
           {{-- mx = margin kiri kanan, mx-large = margin kiri kanan desktop --}}
           <li class="nav-item d-block d-lg-none d-xl-block" >
             {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}
-            <a class="nav-link active" aria-current="page" href="{{ route ('home') }}">Home</a>
+            <a class="nav-link {{ Route::currentRouteName() === 'home' ? 'active' : '' }}" aria-current="page" href="{{ route ('home') }}">Home</a>
           </li>
           <li class="nav-item d-block d-lg-none d-xl-block" >
           {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}
-            <a class="nav-link active"  href="#">Discussion</a>
+            <a class="nav-link {{ Route::currentRouteName() === 'discussions' ? 'active' : '' }}"  href="{{ route('discussions') }}">Discussion</a>
           </li>
           <li class="nav-item d-block d-lg-none d-xl-block" >
             {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}
-            <a class="nav-link active"  href="#">About Us</a>
+            <a class="nav-link"  href="#">About Us</a>
           </li>
         </ul>
         <form class="d-flex w-100 me-4 my-2 my-lg-0" role="search" action="#" method="GET">
             <div class="input-group">
-                <span class="input-group-text bg-white border-end-0"> <img src="{{ url('assets/images/Magnifier.png') }}" alt="Search"></span>
+                <span class="input-group-text bg-white border-end-0"><img src="{{ url('assets/images/Magnifier.png') }}" alt="Search"></span>
                 <input class="form-control border-start-0 ps-0" type="search" placeholder="Search" aria-label="Search" name="" value="">
             </div>
         </form>
         <ul class="navbar-nav ms-auto my-2 my-lg-0">
           {{-- margin kiri auto, margin atas-bawah 2, desktop atas bawah 0 --}}
           <li class="nav-item my-auto">
-            <a class="nav-link text-nowrap"  href="#">Log In</a>
+            <a class="nav-link text-nowrap {{ Route::currentRouteName() === 'login' ? 'active' : '' }}"  href="{{ route('login') }}">Log In</a>
           </li>
           <li class="nav-item ps-1 pe-0">
-            <a class="btn btn-primary-white"  href="#">Sign Up</a>
+            <a class="btn btn-primary-white"  href="{{ route('sign-up') }}">Sign Up</a>
           </li>
         </ul>
       </div>

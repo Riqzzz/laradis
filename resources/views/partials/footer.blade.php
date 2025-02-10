@@ -19,10 +19,10 @@
               <p class="fw-bold fs-5 text-white">Links</p>
               <ul class="list-unstyled">
                 <li class="text-white mb-2">
-                  <a href="#">Home</a>
+                  <a href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="text-white mb-2">
-                  <a href="#">Discussions</a>
+                  <a href="{{ route('discussions') }}">Discussions</a>
                 </li>
                 <li class="text-white mb-2">
                   <a href="#">About Us</a>

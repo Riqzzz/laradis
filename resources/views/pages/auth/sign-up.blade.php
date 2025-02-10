@@ -51,7 +51,7 @@
                         </form>
                     </div>
                     <div class="text-center">Already have an account? 
-                        <a href="#" class="text-underline">
+                        <a href="{{ route('login') }}" class="text-underline">
                             <u class="text-primary">Log in</u>
                         </a>
                     </div>
