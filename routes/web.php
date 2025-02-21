@@ -36,3 +36,7 @@ Route::get('discussions/lorem', function () {
 Route::get('discussions/create', function () {
     return view('pages.discussions.form');
 })-> name ('create discussions');
+
+Route::get('discussions/answer/1', function () {
+    return view('pages.discussions.edit');
+})-> name ('edit discussions');
