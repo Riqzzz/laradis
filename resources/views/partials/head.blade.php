@@ -3,4 +3,5 @@
 
         <title>Laradis</title>
 
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet">    
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
