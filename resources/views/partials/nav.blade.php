@@ -14,7 +14,7 @@
           </li>
           <li class="nav-item d-block d-lg-none d-xl-block" >
           {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}
-            <a class="nav-link {{ Route::currentRouteName() === 'discussions' ? 'active' : '' }}"  href="{{ route('discussions') }}">Discussion</a>
+            <a class="nav-link {{ Route::currentRouteName() === 'discussions' ? 'active' : '' }}"  href="{{ route('discussions') }}">Discussions</a>
           </li>
           <li class="nav-item d-block d-lg-none d-xl-block" >
             {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}

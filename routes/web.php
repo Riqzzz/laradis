@@ -40,3 +40,7 @@ Route::get('discussions/create', function () {
 Route::get('discussions/answer/1', function () {
     return view('pages.discussions.edit');
 })-> name ('edit discussions');
+
+Route::get('users/towick', function () {
+    return view('pages.users.show');
+})-> name ('user profile');
