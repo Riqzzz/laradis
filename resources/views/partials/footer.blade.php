@@ -1,7 +1,7 @@
 <footer class="py-40px">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-6 mb-5 mbb-lg-0">
+        <div class="col-12 col-lg-6 mb-5 mb-lg-0">
           <img src="{{ url('assets/images/Logo-footer.png')}}" class="h-32px mb-4" alt="Logo Footer">
           <p class="text-white">Empowering the Laravel Community <br>to connect. share and learn</p>
         </div>

@@ -44,3 +44,7 @@ Route::get('discussions/answer/1', function () {
 Route::get('users/towick', function () {
     return view('pages.users.show');
 })-> name ('user profile');
+
+Route::get('users/towick/edit', function () {
+    return view('pages.users.form');
+})-> name ('edit profile');
