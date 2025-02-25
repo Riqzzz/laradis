@@ -184,5 +184,8 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
+    
 
+    //Env Mapping
+    'avatar_generator_url' => env('AVATAR_GENERATOR_URL'),  
 ];
