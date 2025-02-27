@@ -14,7 +14,7 @@
           </li>
           <li class="nav-item d-block d-lg-none d-xl-block" >
           {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}
-            <a class="nav-link {{ Route::currentRouteName() === 'discussions' ? 'active' : '' }}"  href="{{ route('discussions') }}">Discussions</a>
+            <a class="nav-link {{ Route::currentRouteName() === 'discussions.index' ? 'active' : '' }}"  href="{{ route('discussions.index') }}">Discussions</a>
           </li>
           <li class="nav-item d-block d-lg-none d-xl-block" >
             {{-- d-block=display item, d-lg-none= display hilang sementara, d-xl-block= display tampil ukuran full desktop  --}}
@@ -30,10 +30,10 @@
         <ul class="navbar-nav ms-auto my-2 my-lg-0">
           {{-- margin kiri auto, margin atas-bawah 2, desktop atas bawah 0 --}}
           <li class="nav-item my-auto">
-            <a class="nav-link text-nowrap {{ Route::currentRouteName() === 'login' ? 'active' : '' }}"  href="{{ route('login') }}">Log In</a>
+            <a class="nav-link text-nowrap {{ Route::currentRouteName() === 'login.show' ? 'active' : '' }}"  href="{{ route('login.show') }}">Log In</a>
           </li>
           <li class="nav-item ps-1 pe-0">
-            <a class="btn btn-primary-white"  href="{{ route('sign-up') }}">Sign Up</a>
+            <a class="btn btn-primary-white"  href="{{ route('sign-up.show') }}">Sign Up</a>
           </li>
         </ul>
       </div>

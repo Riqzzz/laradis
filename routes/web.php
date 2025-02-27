@@ -17,17 +17,18 @@ Route::get('home', function () {
     return view('home');
 })-> name ('home');
 
-Route::get('login', function () {
-    return view('pages.auth.login');
-})-> name ('login');
+Route::namespace('App\Http\Controllers\Auth')->group(function () {
+    Route::get('login', 'LoginController@show')-> name('login.show');
+    Route::post('login', 'LoginController@login')-> name('login.login');
+});
 
 Route::get('sign-up', function () {
     return view('pages.auth.sign-up');
-})-> name ('sign-up');
+})-> name ('sign-up.show');
 
 Route::get('discussions', function () {
     return view('pages.discussions.index');
-})-> name ('discussions');
+})-> name ('discussions.index');
 
 Route::get('discussions/lorem', function () {
     return view('pages.discussions.show');
