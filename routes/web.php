@@ -18,13 +18,11 @@ Route::get('home', function () {
 })-> name ('home');
 
 Route::namespace('App\Http\Controllers\Auth')->group(function () {
-    Route::get('login', 'LoginController@show')-> name('login.show');
-    Route::post('login', 'LoginController@login')-> name('login.login');
+    Route::get('login', 'LoginController@show')->name('login.show');
+    Route::post('login', 'LoginController@login')->name('login.login');
+    Route::get('sign-up', 'SignUpController@show')->name('sign-up.show');
+    Route::post('sign-up', 'SignUpController@signUp')->name('sign-up.signUp');
 });
-
-Route::get('sign-up', function () {
-    return view('pages.auth.sign-up');
-})-> name ('sign-up.show');
 
 Route::get('discussions', function () {
     return view('pages.discussions.index');

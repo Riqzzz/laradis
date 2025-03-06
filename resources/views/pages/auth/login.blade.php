@@ -14,8 +14,8 @@
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror @error('credentials') is-invalid @enderror" 
-                                id="email" name="email" placeholder="email@example.com" 
-                                value="{{ old('email') }}" autocomplete="off" autofocus>
+                                    id="email" name="email" placeholder="email@example.com" 
+                                    value="{{ old('email') }}" autocomplete="off" autofocus>
                                 @error('email')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -26,9 +26,11 @@
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <div class="input-group mb-3">
-                                    <input type="password" class="form-control border-end-0 pe-0 rounded-0 rounded-start @error('password') is-invalid @enderror"
-                                        id="password" name="password" placeholder="password" autocomplete="off">
-                                    <span class="input-group-text bg-white border-start-0 pe-auto @error('password') border-danger rounded-end @enderror">
+                                    <input type="password" class="form-control border-end-0 pe-0 rounded-0 
+                                        rounded-start @error('password') is-invalid @enderror" id="password" 
+                                        name="password" placeholder="password" autocomplete="off">
+                                    <span class="input-group-text bg-white border-start-0 pe-auto @error('password') 
+                                        border-danger rounded-end @enderror">
                                         <a href="javascript:;" id="password-toogle">
                                             <img src="{{ url('assets/images/eye-slash.png')}}" id="password-toogle-img" alt="Toogle Password">
                                         </a>

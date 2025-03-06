@@ -20,6 +20,11 @@ class LoginController extends Controller
             return redirect()->route('discussions.index');
         }
 
-        return redirect()->back()->withErrors(['$credentials' => 'Email or Password Incorrect'])->withInput();
+        return redirect()->back()->withInput()->withErrors(['$credentials' => 'Email or Password Incorrect']);
+    }
+
+    public function logout(){
+        auth()->logout();
+        return redirect()->route('home');
     }
 }

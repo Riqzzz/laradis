@@ -29,12 +29,25 @@
         </form>
         <ul class="navbar-nav ms-auto my-2 my-lg-0">
           {{-- margin kiri auto, margin atas-bawah 2, desktop atas bawah 0 --}}
-          <li class="nav-item my-auto">
-            <a class="nav-link text-nowrap {{ Route::currentRouteName() === 'login.show' ? 'active' : '' }}"  href="{{ route('login.show') }}">Log In</a>
-          </li>
-          <li class="nav-item ps-1 pe-0">
-            <a class="btn btn-primary-white"  href="{{ route('sign-up.show') }}">Sign Up</a>
-          </li>
+          @auth
+            <li class="nav-item my-auto dropdown">
+              <a class="nav-link p-0 align-items-center d-flex" href="javascript:;" data-bs-toggle="dropdown">
+                <div class="avatar-nav-wrapper me-2">
+                  <img src="{{ Storage::url(auth()->user()->picture) }}" 
+                  alt="{{ auth()->user()->username }}" class="avatar-rounded-circle">
+                </div>
+                <span class="fw-bold">{{ auth()->user()->username }}</span>
+              </a>
+            </li>
+          @endauth
+          @guest      
+            <li class="nav-item my-auto">
+              <a class="nav-link text-nowrap {{ Route::currentRouteName() === 'login.show' ? 'active' : '' }}"  href="{{ route('login.show') }}">Log In</a>
+            </li>
+            <li class="nav-item ps-1 pe-0">
+              <a class="btn btn-primary-white"  href="{{ route('sign-up.show') }}">Sign Up</a>
+            </li>
+          @endguest
         </ul>
       </div>
     </div>
