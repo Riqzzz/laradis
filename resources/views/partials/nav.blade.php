@@ -33,11 +33,23 @@
             <li class="nav-item my-auto dropdown">
               <a class="nav-link p-0 align-items-center d-flex" href="javascript:;" data-bs-toggle="dropdown">
                 <div class="avatar-nav-wrapper me-2">
-                  <img src="{{ Storage::url(auth()->user()->picture) }}" 
-                  alt="{{ auth()->user()->username }}" class="avatar-rounded-circle">
+                  <img src="{{ filter_var(auth()->user()->picture, FILTER_VALIDATE_URL) ? auth()->user()->picture 
+                    : Storage::url(auth()->user()->picture) }}" 
+                    alt="{{ auth()->user()->username }}" class="avatar rounded-circle">
                 </div>
                 <span class="fw-bold">{{ auth()->user()->username }}</span>
               </a>
+              <ul class="dropdown-menu mt-2">
+                <li>
+                  <a class="dropdown-item" href="{{ route('users.show') }}">My Profile</a>
+                </li>
+                <li>
+                  <form action="{{ route('login.logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="dropdown-item">Log Out</button>
+                  </form>
+                </li>
+              </ul>
             </li>
           @endauth
           @guest      

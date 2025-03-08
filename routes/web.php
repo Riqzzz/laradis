@@ -20,6 +20,7 @@ Route::get('home', function () {
 Route::namespace('App\Http\Controllers\Auth')->group(function () {
     Route::get('login', 'LoginController@show')->name('login.show');
     Route::post('login', 'LoginController@login')->name('login.login');
+    Route::post('logout', 'LoginController@logout')->name('login.logout');
     Route::get('sign-up', 'SignUpController@show')->name('sign-up.show');
     Route::post('sign-up', 'SignUpController@signUp')->name('sign-up.signUp');
 });
@@ -42,8 +43,8 @@ Route::get('discussions/answer/1', function () {
 
 Route::get('users/towick', function () {
     return view('pages.users.show');
-})-> name ('user profile');
+})-> name ('users.show');
 
 Route::get('users/towick/edit', function () {
     return view('pages.users.form');
-})-> name ('edit profile');
+})-> name ('users.form');

@@ -19,18 +19,18 @@ class SignUpController extends Controller
         // tambahkan password dengan method bcrypt / hash
         // tambahkan picture dummy sesuai dengan username
         // create user berdasarkan request yang sudah tervalidasi dan yang sudah diproses
-        // jika create berhasil maka loginkan user direct ke list discussions
+        // jika create berhasil, direct user untuk login di page login
         // jika tidak berhasil maka return 500
 
         $validated = $request->validated();
         $validated['password'] = bcrypt($validated['password']);
         $validated['picture'] = config('app.avatar_generator_url').$validated['username'];
-        
         $create = User::create($validated);
-
-        if ($create){
-            Auth::login($create);
-            return redirect()->route('discussions.index');
+        $created = $create;
+        
+        if ($create == $created){
+            // Auth::signUp($create);
+            return redirect()->route('login.login');
         }
 
         return abort(500);
