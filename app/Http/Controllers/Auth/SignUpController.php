@@ -19,7 +19,7 @@ class SignUpController extends Controller
         // tambahkan password dengan method bcrypt / hash
         // tambahkan picture dummy sesuai dengan username
         // create user berdasarkan request yang sudah tervalidasi dan yang sudah diproses
-        // jika create berhasil maka loginkan user direct ke lis discussions
+        // jika create berhasil maka loginkan user direct ke list discussions
         // jika tidak berhasil maka return 500
 
         $validated = $request->validated();

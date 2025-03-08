@@ -9,7 +9,7 @@
                         <img src="{{ url('assets/images/Logo-footer.png')}}" class="h-32px" alt="Login Logo">
                     </a>
                     <div class="card mb-5">
-                        <form action="{{ url('login.login') }}" method="POST">
+                        <form action="{{ route('login.login') }}" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
